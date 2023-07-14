@@ -96,7 +96,8 @@ int registro()
     break;
 
     case 2:
-    main();
+    return 0;
+	main();
     break;
 }
 }
