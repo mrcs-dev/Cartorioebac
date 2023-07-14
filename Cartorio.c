@@ -141,10 +141,23 @@ int registro()
 }
     int main()
 {
+	setlocale(LC_ALL, "Portuguese");
 	int opcao=0; //Definindo variáveis  (=atribuição) (==comparação)
 	int x=1;
+	char senhadigitada[]="a"; // cria senha
+	int comparacao; // compara o valor da senha
+	
+	printf("|  Cartório da EBAC    |\n"); // início do menu
+	printf("========================\n\n");
+	printf("Login de Administrador\n\nDigite sua senha:");
+	scanf("%s",senhadigitada);
+	
+	comparacao = strcmp(senhadigitada, "admin"); // compara o valor da senha, se for admin está correta
+	
+	if(comparacao == 0)
 	
 	for(x=1;x=1;)
+	{
 {
 		system("cls");
 		
@@ -187,8 +200,13 @@ int registro()
 	printf("Essa opção não existe.\n");	
 	system("pause");
 	break;//fim da seleção
-			
-}
 
 }
 }
+}
+	else
+		printf("Senha incorreta!\n"); 
+		system("pause");
+		system("cls");
+		main();
+} 
